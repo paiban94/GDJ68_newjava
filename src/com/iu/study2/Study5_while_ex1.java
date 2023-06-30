@@ -53,10 +53,13 @@ public class Study5_while_ex1 {
 					}else {
 						System.out.println("로그인실패");
 					}
-				}else {break;
+				}else {
+					check=false;
+				//= check=!check;	
+					break;
 					}
 				}//while 끝
-			
+			if(check) {
 			//로그인 성공 했을 때만 진행
 			//MMORPG
 			//시작레벨:1
@@ -74,23 +77,55 @@ public class Study5_while_ex1 {
 			//렙업 시 게임을 계속할지 종료할지 선택 
 			//현제레벨, GOLD 출력
 			
-		/*
+			//---선생님코드
+		
 			
 			int level=1;
+			int gold=0;
+			//int count=3;
 			for(level=1;level<15;level++) {
+			
+				if(level%5==0) {
+					System.out.println("5레벨 달성 출하합니다.");
+					gold = gold+ level/5*1000;
+				}
+			//	if(level==10) {   (level%5==0 로 처리)
+			//		System.out.println("10레벨 달성 출하합니다.");
+			//		gold = gold+ 2000;
+			//	}
+								
+				//count=3*level;  => level*3 으로 처리
+				//렙업시 게임을 계속할지 종료할지 선택
+				System.out.println("1.사냥시작 2.게임종료");
+				int select=sc.nextInt();
+				if(select !=1) {
+					break;
+				}
+				
+				for(int monster=0;monster<level*3;monster++) {
+					System.out.println(monster+1+"마리 사냥 성공");
+				}
+
 			System.out.println(level+1+"로 레벨업 하였습니다.");
 				
+			} // 레벨업과정
+			if(level%5==0) {
+				System.out.println("15레벨 달성 출하합니다.");
+				gold=gold+3000;
 			}
+			//게임종료시 레벨이 15가 아닐수 있으므로 따로 작성
 			
+			//현재레벨, GOLD 출력
 			
-			*/
+			System.out.println("현재 레벨 :"+ level);
+			System.out.println("현재 골드 :"+ gold);
+			}
+		}
+}
 			
-			
-			
-			
-			
-			//-------------------------------
-			int lev=1;
+			//----내가한거---------------------------
+		
+	/*		int lev=1;
 			for(lev=1;lev<15;lev++) {
 			System.out.println(lev+1+"로 레벨업 하였습니다.");
 			}
@@ -102,5 +137,5 @@ public class Study5_while_ex1 {
 			
 			System.out.println("프로그램 종료");
 			}
-	}
+	}*/
 	
